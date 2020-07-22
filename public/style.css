@@ -1,0 +1,103 @@
+* {
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 0;
+}
+
+body {
+  color: #335;
+  background-color: #eef;
+  background-image: url(/email-pattern.png);
+  padding: 1em;
+  font-family: arial;
+}
+
+main {
+  max-width: 640px;
+  margin: 3em auto 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+section {
+  border-radius: 5px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.7);
+  padding: 0.5em 1em;
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+}
+
+* + section {
+  margin-top: 2em;
+}
+
+* + input, * + ul, * + textarea, * + .buttonRow {
+  margin-top: 1em;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.buttonRow > * {
+  margin: 0 0 0 1em;
+  width: auto;
+}
+
+.buttonRow > *:first-child {
+  margin: 0;
+}
+
+
+input, textarea {
+  padding: 0.3em 0.6em;
+  border-radius: 3px;
+  border: 0;
+  font-size: inherit;
+  display: block;
+  width: 100%;
+}
+
+input[type="submit"] {
+  background-color: #C6FF00;
+  color: black;
+  display: inline;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.5);
+  transition: box-shadow 0.5s;
+}
+
+input[type="submit"]:hover {
+  box-shadow: 0 6px 18px rgba(0,0,0,0.8);
+}
+
+input[type="submit"].destructive {
+  background-color: #DD2C00;
+  color: white;
+}
+
+input[type="submit"].secondary {
+  background-color: #E6EE9C;
+}
+
+
+a {
+  color: #C6FF00 !important;
+  text-decoration: none;
+}
+
+table {
+  width: 100%;
+}
+
+td {
+  padding: 0.3em 0.15em;
+}
+
+/*
+ * Your styling goes here...
+ * Feel free to also use a CSS (reset) library, if you prefer.
+ */

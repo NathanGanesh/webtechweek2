@@ -1,0 +1,25 @@
+<section>
+  It's currently {{date}}.
+</section>
+
+<section>
+  This is visit #{{counter}} since this server started.
+</section>
+
+<section>
+  Our list of items:
+  <ul>    
+  {{#each items}}
+    <li>
+      {{{this}}}
+    </li>
+  {{else}}
+    <i>Empty</i>
+  {{/each}}
+  </ul>
+  
+  <form method="POST" action="/items">
+    <input type="text" name="item" placeholder="Your new item">
+    <input type="submit" value="Add">
+  </form>
+</section>
