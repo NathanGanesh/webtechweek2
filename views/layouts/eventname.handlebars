@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event name</title>
+</head>
+<body>
+    <section>
+        <h2>Event details</h2>
+        <li>{{{event.creator}}}</li>
+           {{#if event.editor}}
+<li>{{event.editor}}</li>
+{{else}}
+<li>Never edited</li>
+{{/if}}
+
+    </section>
+    <section>
+        <h3>Edit event</h3>
+        <form action="/edit/{{event.title}}/save" method="POST">
+        <input value="{{{event.title}}}" name ="eventname">
+        <input value="{{{event.description}}}" name="eventdescription">
+        <input value="{{{event.date}}}" name="eventdate">
+        <input value="{{{event.time}}}" name="eventtime" >
+        <div class="form-buttons">
+         <input class="login-button" type="submit" value="Save">
+        </form>
+
+        <form action="/edit/{{event.title}}/delete" method="POST">
+        <input class="login-button" type="submit" value="Delete event">
+        <form action="/cancel" method="post">
+        <input class="login-button" type="submit" value="Cancel" method="post" formaction="/cancel">
+        </form>
+
+    
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event calendar</title>
+</head>
+<body>
+    <section>
+    <h3>You're logged in as {{username}}</h3>
+    <form method="POST" action="/logout"> 
+    <input class="login-button" type="submit" value="logout">
+    </form>
+     </section>
+    <section>
+
+
+  <ul class="flex-box">    
+  {{#each events}}
+  
+    <li class="flex-box2"> 
+    <p>{{{date}}}</p>
+    <p>{{{time}}}</p>
+  
+      <a href="/edit/{{title}}">{{title}}
+          </a>
+          <p>{{{place}}}</p>
+      <p>{{{description}}}</p>
+    </li>
+    </div>
+  {{else}}
+    <i>Empty</i>
+  {{/each}}
+  </ul>
+
+    <form class="form-ok" action="/add_event" method="get">
+   <input  class="add-button" type="submit" value="Add an event">
+    </form>
+
+
+   
+</body>
+</html>
